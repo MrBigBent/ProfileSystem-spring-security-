@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.emre</groupId>
-	<artifactId>ProfileSystem(spring-security)</artifactId>
+	<artifactId>ProfileSystem</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ProfileSystem(spring-security)</name>
 	<description>Demo project for Spring Boot</description>
