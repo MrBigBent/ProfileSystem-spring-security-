@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="@{fragments/main_layout}" >
+  
+  
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+<meta charset="UTF-8">
+<title>Register Form</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<br/><br/>
+<div class="container">
+	<form class="form-inline" action="/users">
+		<div class="form-group mb-3">
+			<input class="form-control" type="text" name="name" placeholder="Search User"/>
+			<input type="submit" value="Search" class="btn btn-primary" />
+		</div>
+	</form>
+	<div class="card">
+		<div class="card card-body">
+			<div class="table table-hover">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Add</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="user:${users}">
+							<td th:text="${user.name}"></td>
+							<td th:text="${user.email}"></td>
+							<td><a href="" class="btn btn-dark">ADD TASK</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<br/>
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
