@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="@{fragments/main_layout}" >
+  
+  
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+<meta charset="UTF-8">
+<title>Register Form</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<br/><br/>
+<div class="container">
+	<div class="card">
+		<div class="card card-body">
+			<div class="table table-hover">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th>Start Time</th>
+							<th>Stop Time</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="task:${tasks}">
+							<td th:text="${task.date}"></td>
+							<td th:text="${task.startTime}"></td>
+							<td th:text="${task.stopTime}"></td>
+							<td th:text="${task.description}"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<br/>
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
