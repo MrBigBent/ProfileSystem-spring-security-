@@ -3,27 +3,29 @@
   xmlns:th="http://www.thymeleaf.org"
   xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
   layout:decorate="@{fragments/main_layout}" >
-  
-  
+<head>
+ <title>Index Page</title>
+ 
  <!-- Required meta tags -->
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
  <!-- Bootstrap CSS -->
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<head>
-<meta charset="UTF-8">
-<title>Register Form</title>
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
-<br/><br/>
-<div class="container">
-	<div class="alert alert-success">
-		Registration success! Please sign to Continue
-	</div>
-</div>
 <br/>
+	<div class="container">
+		<div layout:fragment="content" class="container mySpace">
+			<div class="alert alert-danger">
+				There was e error | <span th:text="${message}"></span> | <span th:text="${status}" class="text text-danger"></span>
+			</div>
+			<div class="alert alert-warning">
+				Please contach EB if you have racher this far !!!
+			</div>
+		</div>
+	</div>
 <div th:replace="fragments/footer :: footer"></div>
 </body>
 </html>
