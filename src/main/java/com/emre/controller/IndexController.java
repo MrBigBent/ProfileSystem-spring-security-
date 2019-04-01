@@ -10,4 +10,9 @@ public class IndexController {
 	public String showIndexPage() {
 		return "index";
 	}
+	
+	@GetMapping("/login")
+	public String showLogin() {
+		return "views/loginForm";
+	}
 }
